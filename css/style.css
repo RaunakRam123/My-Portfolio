@@ -341,6 +341,52 @@ button {
     color: #252f2d;
 }
 
+/* .video_bt {
+    width: 100%;
+    float: left;
+    padding-top: 120px;
+    padding-left: 20px;
+}
+
+.play_icon img {
+    width: 80px;
+}
+
+.play_icon {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.play_icon::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 90px;
+    height: 90px;
+    transform: translate(-50%, -50%);
+    background-color: #f5c729;
+    border-radius: 100%;
+    animation: fadeEffect 1.3s infinite ease;
+    box-shadow: 0px 0px 10px 0px;
+    right: initial;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+@keyframes fadeEffect {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
+} */
+
 .carousel-inner,
 .carousel,
 .carousel-item,
@@ -358,6 +404,80 @@ button {
 .slide-wrapper .container {
     padding: 0;
 }
+
+
+/*------------------------------ vertical bootstrap slider----------------------------*/
+
+.banner_section .carousel-inner>.carousel-item.carousel-item-next,
+.banner_section .carousel-inner>.carousel-item.active.carousel-item-right {
+    transform: translate3d(0, 100%, 0);
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    top: 0;
+}
+
+.banner_section .carousel-inner>.carousel-item.carousel-item-prev,
+.banner_section .carousel-inner>.carousel-item.active.carousel-item-left {
+    transform: translate3d(0, -100%, 0);
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    top: 0;
+}
+
+.banner_section .carousel-inner>.carousel-item.next.carousel-item-left,
+.banner_section .carousel-inner>.carousel-item.carousel-item-prev.carousel-item-right,
+.banner_section .carousel-inner>.carousel-item.active {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    ;
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    top: 0;
+}
+
+
+/*------------------------------- vertical carousel indicators ------------------------------*/
+
+.carousel-indicators {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 20px;
+    right: 10px;
+    left: auto;
+    width: auto;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    display: none;
+}
+
+.carousel-indicators li {
+    display: block;
+    margin-bottom: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #0fbdd7
+}
+
+.carousel-indicators li.active {
+    margin-bottom: 5px;
+    background: #ffffff;
+}
+
+
+/* banner section end */
+
+
 /* services section start */
 
 .services_section {
@@ -371,8 +491,8 @@ button {
     font-size: 40px;
     color: #f5c729;
     font-weight: bold;
-    margin-top:30px
-    align-item: center
+    text-align: center;
+    margin-top: 30px;
 }
 
 .services_text {
